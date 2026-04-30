@@ -1,0 +1,47 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* Шрифты */
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P', sans-serif;
+ 
+  /* Веса вариативного шрифта Inter */
+  --main-font-weight: 400; /* обычный текст карточки */
+  --accent-font-weight: 700; /* жирный заголовок карточки */
+
+  /* Резиновая ширина основного контейнера (шапка, карточки, футер) */
+  --container-width: clamp(370px, 100vw, 700px);
+
+  /* Цвет обводки текста лейбла на карточках. */
+  --label-stroke-color: #fff;
+
+  /* Цвет текста кнопок (белый для mix-blend-mode: difference) */
+  --button-text-color: #fff;
+
+  /* Цвета иконки сердца */
+  --like-contour-color: #000;
+  --animation-fill-color: #FF0000;
+
+  /* Множественный градиент фона страницы */
+  --background-gradient:
+  repeating-linear-gradient(
+    to right,
+    #d3d3d3 0,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+  linear-gradient(
+    to bottom,
+    #e7e7e7 0.01%,
+    #1a1a1a
+  );
+}
+ 
