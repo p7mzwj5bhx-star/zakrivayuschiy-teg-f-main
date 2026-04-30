@@ -3,8 +3,9 @@
 /* Вариативный шрифт Inter — основной текст. */
 @font-face {
   font-family: 'Inter-Variable';
-  src: url('./Inter-Variable.woff2') format('woff2-variations');
-  font-weight: 400 700;
+  src: url('./Inter-Variable.woff2') format('woff2 supports variations'),
+       url('./Inter-Variable.woff2') format('woff2-variations');
+  font-weight: 1 785;
   font-style: normal;
   font-display: swap;
 }

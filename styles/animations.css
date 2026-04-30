@@ -45,13 +45,25 @@
 }
 
 @keyframes heart-scale {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.25); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
 }
 
 @keyframes sparks-on {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .like-icon.is-liked .core {
@@ -70,8 +82,8 @@
 }
 
 .like-icon.is-liked .heart {
-  transform-box: fill-box;
   animation: heart-scale 0.3s ease-in 0.1s;
+  transform-box: fill-box;
 }
 
 .like-icon.is-liked .sparks {
