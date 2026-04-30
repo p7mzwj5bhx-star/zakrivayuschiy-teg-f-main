@@ -1,1 +1,1 @@
-https://github.com/p7mzwj5bhx-star/zakrivayuschiy-teg-f-main
+https://github.com/p7mzwj5bhx-star/zakrivayuschiy-teg-f
