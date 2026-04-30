@@ -630,9 +630,6 @@
 
     <script src="./scripts/like.js"></script>
     <script>
-      // Открытие диалогового окна по клику на «Сохранить на память».
-      // Закрытие — нативное: form method="dialog" + submit-кнопка OK
-      // автоматически закроет dialog без дополнительного JS.
       const saveButton = document.querySelector(".content__save-button");
       const dialog = document.querySelector(".content__dialog");
       saveButton.addEventListener("click", () => dialog.showModal());
