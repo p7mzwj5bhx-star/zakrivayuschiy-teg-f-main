@@ -6,8 +6,8 @@
   --accent-font: 'PressStart2P', sans-serif;
  
   /* Веса вариативного шрифта Inter */
-  --main-font-weight: 400; /* обычный текст карточки */
-  --accent-font-weight: 700; /* жирный заголовок карточки */
+  --main-font-weight: 410; /* обычный текст карточки */
+  --accent-font-weight: 715; /* жирный заголовок карточки */
 
   /* Резиновая ширина основного контейнера (шапка, карточки, футер) */
   --container-width: clamp(370px, 100vw, 700px);
