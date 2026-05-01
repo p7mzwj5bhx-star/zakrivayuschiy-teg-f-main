@@ -41,6 +41,7 @@
   color: inherit;
   font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-variation-settings: normal;
   text-decoration: none;
 }
 
@@ -76,7 +77,7 @@
   padding-block: 5px 6px;
   font-size: 18px;
   line-height: normal;
-  font-variation-settings: 'wght' var(--accent-font-weight);
+  font-variation-settings: normal;
 }
 
 .card__image-wrapper {
@@ -96,35 +97,35 @@
 
 /* Фильтры на изображениях карточек */
  
-.card__image_filter_road {
+.filter-saturate {
   filter: saturate(150%);
 }
 
-.card__image_filter_pool {
+.filter-brightness {
   filter: contrast(75%) brightness(110%);
 }
 
-.card__image_filter_night {
+.filter-hue-rotate {
   filter: hue-rotate(-15deg);
 }
 
-.card__image_filter_lamba {
+.filter-saturate-contrast {
   filter: saturate(150%) contrast(110%);
 }
 
-.card__image_filter_palm {
+.filter-sepia {
   filter: sepia(100%);
 }
 
-.card__image_filter_desert {
+.filter-invert {
   filter: invert(100%) hue-rotate(180deg);
 }
 
-.card__image_filter_car {
+.filter-grayscale {
   filter: grayscale(50%);
 }
 
-.card__image_filter_sun {
+.filter-blur {
   filter: blur(2px);
 }
 
@@ -164,7 +165,6 @@
   justify-content: end;
   align-items: center;
   gap: 4px;
-  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -198,34 +198,9 @@
   opacity: 0;
 }
 
-.card__like-button {
+.button {
   position: relative;
   border: 2px solid #000;
-  padding-inline: 35px;
-  overflow: hidden;
-  font-family: var(--accent-font, fantasy);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 0.9;
-  background-color: #fff;
-  cursor: pointer;
-  inline-size: 130px;
-  block-size: 38px;
-}
-
-/* Кнопка «Сохранить на память» */
-
-.content__save-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-inline: auto;
-  margin-block: 50px 100px;
-  border: 2px solid #000;
-  padding-inline: 19px;
-  padding-block: 15px;
   overflow: hidden;
   font-family: var(--accent-font, fantasy);
   font-weight: 400;
@@ -234,6 +209,43 @@
   background-color: #fff;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transition: translate 0.5s ease-in-out;
+  translate: -100% 0;
+}
+
+.button:hover::before {
+  translate: 0 0;
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0 #000;
+  outline: none;
+}
+
+.card__like-button {
+  padding-inline: 35px;
+  inline-size: 130px;
+  block-size: 38px;
+}
+
+/* Кнопка «Сохранить на память» */
+
+.content__save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-inline: auto;
+  margin-block: 50px 100px;
+  padding-inline: 19px;
+  padding-block: 15px;
 }
 
 .button__text {
@@ -308,41 +320,12 @@
 }
 
 .dialog__button {
-  position: relative;
-  border: 2px solid #000;
   padding-block: 9px;
-  overflow: hidden;
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 0.9;
   text-transform: uppercase;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
   inline-size: 100%;
 }
 
-.card__like-button::before,
-.content__save-button::before,
-.dialog__button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #000;
-  transition: translate 0.5s ease-in-out;
-  translate: -100% 0;
-}
-
-.card__like-button:hover::before,
-.content__save-button:hover::before,
-.dialog__button:hover::before {
-  translate: 0 0;
-}
-
-.card__like-area:focus,
-.content__save-button:focus,
-.dialog__button:focus,
-.card__like-button:focus {
+.card__like-area:focus {
   box-shadow: 2px 2px 0 #000;
   outline: none;
 }
